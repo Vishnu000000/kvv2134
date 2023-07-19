@@ -30,6 +30,46 @@
     Color design and end animation by Niki 
  */
         
+        .kv {
+            animation: blink 1s steps(1, end) infinite;
+        }
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            10% {
+                opacity: 0.9
+            }
+            20% {
+                opacity: 0.8;
+            }
+            30% {
+                opacity: 0.7;
+            }
+            40% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.4
+            }
+            60% {
+                opacity: 0.3;
+            }
+            70% {
+                opacity: 0.7;
+            }
+            80% {
+                opacity: 0.90;
+            }
+            90% {
+                opacity: 0.95;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
         .button {
             background-color: #4CAF50;
             /* Green */
@@ -194,22 +234,32 @@
     <p id="p"></p>
     <div id="player"></div>
     <div id="card">
-        <div class="card" id="vv">
+        <div class="card">
             <h1 style="text-align: center;">Game Over</h1>
             <p id="sco" style="text-align: center;">Score :</p>
             <div id="btn">
                 Play Again
             </div><br>
-            <div id="btn" href="https://www.marvelpics.org">
-                Adjust Level
-            </div>
+            <a href="https://www.marvelpics.org" style="text-decoration: none;">
+                <div id="btn">
+                    Adjust Level
+                </div>
+            </a>
             <br>
-            <div id="btn" href="https://www.instagram.com/im_kvv">
-                Contact
+            <a href="https://www.instagram.com/im_kvv" style="text-decoration: none;">
+                <div id="btn">
+                    Contact Us
+                </div>
+            </a><br>
+            <div id="btn">
+                A Game by K Vishnu Vardhan
             </div>
         </div>
     </div>
-    <p id="options" style="align-items: center;">
+    <p id="options1" style="align-items: center;">
+        Choose Your Level of Game...</p>
+
+    <p id="options2" style="align-items: center;">
         <button onclick="kvv('100');" class="button button6">Default</button><br>
         <button onclick="kvv('200');" class="button button1">Easy</button><br>
         <button onclick="kvv('130')" class="button button2">Moderate</button><br>
@@ -220,11 +270,12 @@
     <script>
         // Created By Vedanshi, Vishnu and Niki. Color design and end animation by Niki 
         var dur;
-        document.getElementById("vv").style.display = "none";
+        document.getElementById("card").style.display = "none";
 
         function kvv(dur) {
-            document.getElementById("options").style.display = "none";
-            document.getElementById("vv").style.display = "initial";
+            document.getElementById("options1").style.display = "none";
+            document.getElementById("options2").style.display = "none";
+            document.getElementById("card").style.display = "initial";
             const cnv = document.getElementById("canvas");
             const ctx = cnv.getContext("2d");
             cnv.height = window.innerHeight;
