@@ -30,13 +30,97 @@
     Color design and end animation by Niki 
  */
         
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding-left: 50%;
+            padding-right: 50%;
+            padding-top: 30%;
+            padding-bottom: 30%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #05eadb;
+        }
+        
+        .button1:hover {
+            background-color: #05eadb;
+            color: white;
+        }
+        
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 2px solid hsl(255, 94%, 52%);
+        }
+        
+        .button2:hover {
+            background-color: hsl(255, 94%, 52%);
+            color: white;
+        }
+        
+        .button3 {
+            background-color: white;
+            color: black;
+            border: 2px solid #42fd03;
+        }
+        
+        .button3:hover {
+            background-color: #42fd03;
+            color: white;
+        }
+        
+        .button4 {
+            background-color: white;
+            color: black;
+            border: 2px solid #f85514;
+        }
+        
+        .button4:hover {
+            background-color: #f85514;
+            color: white;
+        }
+        
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #e21717;
+        }
+        
+        .button5:hover {
+            background-color: #e21717;
+            color: white;
+        }
+        
+        .button6 {
+            background-color: white;
+            color: black;
+            border: 2px solid #1fccf8;
+        }
+        
+        .button6:hover {
+            background-color: #1fccf8;
+            color: white;
+        }
+        
         body {
             margin: 0;
             padding: 0;
         }
         
         canvas {
-            background-color: #000;
+            background-color: white;
             position: fixed;
         }
         
@@ -96,8 +180,6 @@
             font-weight: bold;
             height: 40px;
             width: 100px;
-            background-color: red;
-            border-radius: 8px;
         }
         
         #sco {
@@ -111,25 +193,35 @@
     <p id="p"></p>
     <div id="player"></div>
     <div id="card">
-        <div class="card">
-            <h1>Game Over</h1>
-            <p id="sco">Score :</p>
-            <div id="btn">Restart</div>
+        <div class="card" id="vv">
+            <h1 style="text-align: center;">Game Over</h1>
+            <p id="sco" style="text-align: center;">Score :</p>
+            <div id="btn">
+                <p style="align-items: center;"> Play Again</p>
+            </div>
         </div>
     </div>
-
+    <p id="options" style="align-items: center;">
+        <button onclick="kvv('100');" class="button button6">Default</button><br>
+        <button onclick="kvv('200');" class="button button1">Easy</button><br>
+        <button onclick="kvv('130')" class="button button2">Moderate</button><br>
+        <button onclick="kvv('80')" class="button button3">Hard</button><br>
+        <button onclick="kvv('50')" class="button button4">Very Hard</button><br>
+        <button onclick="kvv('25')" class="button button5">GOD Mode</button>
+    </p>
     <script>
         // Created By Vedanshi, Vishnu and Niki. Color design and end animation by Niki 
+        var dur;
+        document.getElementById("vv").style.display = "none";
 
-
-        window.onload = () => {
+        function kvv(dur) {
+            document.getElementById("options").style.display = "none";
+            document.getElementById("vv").style.display = "initial";
             const cnv = document.getElementById("canvas");
             const ctx = cnv.getContext("2d");
-            cnv.height = 0.8 * window.innerHeight;
+            cnv.height = window.innerHeight;
             cnv.width = window.innerWidth;
             let enemies = [];
-            var dur = 200;
-            alert(`Let's play. Oh wait...\nWe have to protect our Red Sphere [HOME] from Evil comets.\nSkip this next time. \nGood Luck 👍👍`)
             var posX = 50;
             var posY = cnv.height - 50;
             let alive = true;
