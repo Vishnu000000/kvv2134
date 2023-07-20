@@ -1,9 +1,7 @@
 <!-- 
 
-   Created By Vedanshi, Vishnu and Niki.
-
-    Color design and end animation by Niki .
-
+   Vishnu 
+    
 -->
 
 
@@ -25,11 +23,6 @@
     <meta name="twitter:image" content="https://www.marvelpics.org/img/vv.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        /* Created By Vedanshi, Vishnu and Niki
-
-    Color design and end animation by Niki 
- */
-        
         body {
             background-color: RGB(247, 202, 201);
             margin: 0;
@@ -184,13 +177,14 @@
 </head>
 
 <body id="b">
+
     <div style=" margin-left: 20%;" id="frontpage">
 
         <ul style="list-style-type: none;">
 
             <li style="">
                 <h2><span style="color:#FFFFF0;
-                font-family: Phantomsans, sans-serif;">The Saviour</span></h2>
+                font-family: Phantomsans, sans-serif;">Comet Protector</span></h2>
             </li><br><br><br>
             <button class="kvv-button" role="button" onclick="kvv('250')"><li class="imgg">
             <span class="text">Easy</span></li>
@@ -203,6 +197,9 @@
           </button><br><br>
             <button class="kvv-button" role="button"><li class="imgg">
             <span class="text">Sound on/off</span></li>
+          </button><br><br>
+            <button class="kvv-button" role="button" onclick="help()"><li class="imgg">
+            <span class="text">Help</span></li>
           </button><br><br>
         </ul>
     </div>
@@ -234,12 +231,16 @@
     </div>
 
     <script>
-        // Created By Vedanshi, Vishnu and Niki. Color design and end animation by Niki 
+        // Vishnu
         var dur;
         document.getElementById("card").style.display = "none";
         document.getElementById("canvas").style.display = "none";
         document.getElementById("p").style.display = "none";
         document.getElementById("player").style.display = "none";
+
+        function help() {
+            alert("Instructions to play: We have to protect Red sphere[Your HOME] from Evil comets firing from Dying Neutron Star.\n\nFor Mobile---> Control the red sphere with your finger tips.\nFor Desktop---> Use your mouse cursor to control It.");
+        };
 
         function kvv(dur) {
             document.getElementById("frontpage").style.display = "none";
