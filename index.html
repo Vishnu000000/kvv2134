@@ -177,29 +177,31 @@
 </head>
 
 <body id="b">
-
     <div style=" margin-left: 20%;" id="frontpage">
 
         <ul style="list-style-type: none;">
 
-            <li style="">
+            <li>
                 <h2><span style="color:#FFFFF0;
                 font-family: Phantomsans, sans-serif;">War of Comets🌠</span></h2>
             </li><br><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('250')"><li class="imgg">
+            <button class="kvv-button" role="button" onclick="kvv('250');play();"><li class="imgg">
             <span class="text">Easy</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('160')"><li class="imgg">
+            <button class="kvv-button" role="button" onclick="kvv('160');play();"><li class="imgg">
             <span class="text">Normal</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('100')"><li class="imgg">
+            <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
             <span class="text">Hard</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button"><li class="imgg">
-            <span class="text">Sound on/off</span></li>
+            <button class="kvv-button" role="button" onclick="play()"><li class="imgg">
+            <span class="text">Sound on</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="help()"><li class="imgg">
-            <span class="text">Help</span></li>
+            <button class="kvv-button" role="button" onclick="pause()"><li class="imgg">
+            <span class="text">Sound off</span></li>
+          </button><br><br>
+            <button class="kvv-button" role="button" onclick="help();play();" onclick="play()"><li class="imgg">
+            <span class="text">Demo Play</span></li>
           </button><br><br>
         </ul>
     </div>
@@ -219,6 +221,9 @@
                 </div>
             </a>
             <br>
+            <div id="btn" class="kvv-button" onclick="pause()">
+                Music off
+            </div><br>
             <a href="https://www.instagram.com/im_kvv" style="text-decoration: none;">
                 <div id="btn" class="kvv-button">
                     Contact Us
@@ -230,6 +235,13 @@
         </div>
     </div>
 
+    <audio controls id="music" loop autoplay hidden>
+
+        <source src="img/game.mp3" type="audio/mpeg">
+        
+        Your browser does not support the audio element.
+        
+        </audio>
     <script>
         // Vishnu
         var dur;
@@ -237,6 +249,25 @@
         document.getElementById("canvas").style.display = "none";
         document.getElementById("p").style.display = "none";
         document.getElementById("player").style.display = "none";
+
+
+        var myMusic = document.getElementById("music");
+
+        function play() {
+
+            myMusic.play();
+
+        }
+
+
+
+        function pause() {
+
+            myMusic.pause();
+
+        }
+
+        window.onclick = play();
 
         function help() {
             alert("Instructions to play: We have to protect Red sphere[Your HOME] from Evil comets firing from Dying Neutron Star.\n\nFor Mobile---> Control the red sphere with your finger tips.\nFor Desktop---> Use your mouse cursor to control It.");
