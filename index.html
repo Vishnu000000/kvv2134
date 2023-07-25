@@ -183,26 +183,31 @@
 
             <li>
                 <h2><span style="color:#FFFFF0;
-                font-family: Phantomsans, sans-serif;">War of Comets🌠</span></h2>
+                font-family: Phantomsans, sans-serif;">War of Comets 🌠</span></h2>
+
             </li><br><br><br>
+            <button class="kvv-button" role="button" onclick="kvv('300');play();"><li class="imgg">
+            <span class="text">Very Easy</span></li>
+          </button><br><br>
             <button class="kvv-button" role="button" onclick="kvv('250');play();"><li class="imgg">
             <span class="text">Easy</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('160');play();"><li class="imgg">
+            <button class="kvv-button" role="button" onclick="kvv('200');play();"><li class="imgg">
             <span class="text">Normal</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
+            <button class="kvv-button" role="button" onclick="kvv('150');play();"><li class="imgg">
             <span class="text">Hard</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="play()"><li class="imgg">
-            <span class="text">Sound on</span></li>
-          </button><br><br>
-            <button class="kvv-button" role="button" onclick="pause()"><li class="imgg">
-            <span class="text">Sound off</span></li>
+            <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
+            <span class="text">Insane</span></li>
           </button><br><br>
             <button class="kvv-button" role="button" onclick="help();play();" onclick="play()"><li class="imgg">
             <span class="text">Demo Play</span></li>
           </button><br><br>
+            <li>
+                <h3><span style="color:#FFFFF0;
+            font-family: Phantomsans, sans-serif;">Turn volume High for Better Experience. </span></h3>
+            </li>
         </ul>
     </div>
     <canvas id="canvas"></canvas>
@@ -244,9 +249,7 @@
         </audio>
     <script>
         // Vishnu
-        setTimeout(function() {
-            alert("War of Comets 🌠\n\nIncrease your volume for Better Experience✨\n\nHeadphones are Recommended✨✨\n\nDEMO PLAY, To Know how to Play or Operate.");
-        }, 2000);
+
 
         var dur;
         document.getElementById("card").style.display = "none";
@@ -387,7 +390,7 @@
 
             function atk() {
                 for (i = 0; i < 1; i++) {
-                    enemies.push(new enemy(random() * cnv.width, 0, 'red', 3))
+                    enemies.push(new enemy(random() * cnv.width, 0, '#00FFFF', 3))
                 }
             }
 
