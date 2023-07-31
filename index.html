@@ -187,20 +187,21 @@
 
             </li><br><br><br>
             <button class="kvv-button" role="button" onclick="kvv('300');play();"><li class="imgg">
-            <span class="text">Very Easy</span></li>
-          </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('250');play();"><li class="imgg">
             <span class="text">Easy</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('200');play();"><li class="imgg">
+            <button class="kvv-button" role="button" onclick="kvv('220');play();"><li class="imgg">
             <span class="text">Normal</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('150');play();"><li class="imgg">
+            <button class="kvv-button" role="button" onclick="kvv('140');play();"><li class="imgg">
             <span class="text">Hard</span></li>
+          </button><br><br>
+            <!--
+            <button class="kvv-button" role="button" onclick="kvv('150');play();"><li class="imgg">
+            <span class="text"></span></li>
           </button><br><br>
             <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
             <span class="text">Insane</span></li>
-          </button><br><br>
+          </button><br><br>-->
             <button class="kvv-button" role="button" onclick="help();play();" onclick="play()"><li class="imgg">
             <span class="text">Demo Play</span></li>
           </button><br><br>
@@ -257,8 +258,8 @@
         document.getElementById("p").style.display = "none";
         document.getElementById("player").style.display = "none";
         setTimeout(function() {
-            alert("Hey there, Music is Removed For Time being\n\nBut Game is much better now, Go Ahead\n\nAvailble in Play Store...Soon");
-        }, 1500);
+            alert("Hi there, Added new random color for comets. Play now\n\nMusic is Removed For Time being.\n\nAvailble in Play Store...Soon");
+        }, 500);
 
         var myMusic = document.getElementById("music");
 
@@ -389,10 +390,11 @@
                 document.getElementById("player").style.left = (posX - 15) + "px";
             }
 
+            var kvv = ['#FF8C00', '#00FFFF', '#FF00FF', '#FF9900'];
 
             function atk() {
                 for (i = 0; i < 1; i++) {
-                    enemies.push(new enemy(random() * cnv.width, 0, '#00FFFF', 3))
+                    enemies.push(new enemy(random() * cnv.width, 0, kvv[Math.floor(Math.random() * kvv.length)], 3))
                 }
             }
 
