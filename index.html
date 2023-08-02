@@ -146,8 +146,54 @@
             background: none;
         }
         
+        .helpcolor {
+            align-items: center;
+            background-image: linear-gradient(144deg, #4568dc, #e06ab3);
+            border: 0;
+            border-radius: 8px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: Phantomsans, sans-serif;
+            font-size: 20px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding: 8px;
+            font-family: 'Times New Roman', serif;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        
+        .helpcolor:active,
+        .button-64:hover {
+            outline: 0;
+        }
+        
+        .helpcolor span {
+            padding: 16px 24px;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            transition: 300ms;
+        }
+        
+        .helpcolor:hover span {
+            background: none;
+        }
+        
         @media (min-width: 768px) {
             .kvv-button {
+                font-size: 24px;
+                /*min-width: 196px;*/
+            }
+            .helpcolor {
                 font-size: 24px;
                 /*min-width: 196px;*/
             }
@@ -205,12 +251,12 @@
             <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
             <span class="text">Insane</span></li>
           </button><br><br>-->
-            <button class="kvv-button" role="button" onclick="help();play();" onclick="play()"><li class="imgg">
-            <span class="text">Demo Play</span></li>
+            <button class="helpcolor" role="button" onclick="help();play();" onclick="play()"><li class="imgg">
+            <span class="text">Help</span></li>
           </button><br><br>
             <li>
                 <h3><span style="color:#FFFFF0;
-            font-family: Phantomsans, sans-serif;">Adjust Your Volume for Better Experience </span></h3>
+            font-family: Phantomsans, sans-serif;">Adjust Your Volume for Better Experience...</span></h3>
             </li>
         </ul>
     </div>
