@@ -49,7 +49,7 @@
             height: 30px;
             width: 30px;
             border-radius: 100%;
-            background-color: red;
+            background-color: skyblue;
             position: fixed;
             bottom: 50px;
             left: 50px;
@@ -81,7 +81,7 @@
         }
         
         .card p {
-            color: #000;
+            color: #fff;
             position: relative;
             font-size: 20px;
             font-weight: bold;
@@ -275,9 +275,11 @@
                     Adjust Level
                 </div>
             </a><br>-->
-
-            <div id="btn" class="kvv-button" onclick="pause()">
-                Game sound
+            <div id="btn" class="kvv-button" onclick="turnon()">
+                Music on
+            </div><br>
+            <div id="btn" class="kvv-button" onclick="turnoff()">
+                Music off
             </div><br>
             <!--<a href="https://www.instagram.com/im_kvv" style="text-decoration: none;">
                 <div id="btn" class="kvv-button">
@@ -327,6 +329,15 @@
             });
         }
 
+        function turnon() {
+            play();
+            swal("War of Comets", "Game Audio Effects Turned on.", "success");
+        }
+
+        function turnoff() {
+            pause();
+            swal("War of Comets", "Game BG Music has Turned off.", "success");
+        }
         var myMusic = document.getElementById("music");
 
         function play() {
@@ -455,14 +466,16 @@
                 document.getElementById("player").style.top = (posY - 15) + "px";
                 document.getElementById("player").style.left = (posX - 15) + "px";
             }
-
-            var kvv = ['red', 'cyan', '#bcfd49'];
-
+            var colofcom;
+            var kvv = ['#00FF00' /*green*/ , '#FF00FF' /*magenta*/ , '#FFFF00' /*Yellow*/ , '#FF7F00' /*orange*/ , 'red', ''];
+            /*kvv[Math.floor(Math.random() * kvv.length)];
+            , '#FFD700', '#bcfd49'*/
             function atk() {
                 for (i = 0; i < 1; i++) {
-                    enemies.push(new enemy(random() * cnv.width, 0, kvv[Math.floor(Math.random() * kvv.length)], 3))
+                    enemies.push(new enemy(random() * cnv.width, 0, kvv[(Math.floor(Math.random() * score / 40)) % 5], 3))
                 }
             }
+
 
             function check() {
                 for (let i = 0; i < enemies.length; i++) {
