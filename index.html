@@ -467,9 +467,9 @@
                 document.getElementById("player").style.left = (posX - 15) + "px";
             }
             var colofcom;
-            var kvv = ['#00FF00' /*green*/ , '#FF00FF' /*magenta*/ , '#FFFF00' /*Yellow*/ , '#FF7F00' /*orange*/ , 'red', ''];
+            var kvv = ['#00FF00', '#FF00FF', '#FFFF00', '#FF7F00', 'red'];
             /*kvv[Math.floor(Math.random() * kvv.length)];
-            , '#FFD700', '#bcfd49'*/
+            , '#FFD700', '#bcfd49' green magenta yellow orange*/
             function atk() {
                 for (i = 0; i < 1; i++) {
                     enemies.push(new enemy(random() * cnv.width, 0, kvv[(Math.floor(Math.random() * score / 40)) % 5], 3))
