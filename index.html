@@ -256,7 +256,7 @@
           </button><br><br>
             <li>
                 <h3><span style="color:#FFFFF0;
-            font-family: Phantomsans, sans-serif;">Adjust Your Volume for Better Experience...</span></h3>
+            font-family: Phantomsans, sans-serif;">Click on Help, To know More about Simulation.<br><br>Adjust Your Volume for Better Experience...</span></h3>
             </li>
         </ul>
     </div>
@@ -286,12 +286,24 @@
                     Contact Us
                 </div>
             </a><br>-->
+            <a href="mailto:vjobsllc@gmail.com?subject=Feedback&body=Hi%20there%20My%20Suggestion%20is..." style="text-decoration: none;">
+                <div id="btn" class="kvv-button" onclick="feedback()">
+                    Contact Us
+                </div>
+            </a><br>
             <div id="btn" class="kvv-button" onclick="thankyou()">
-                Click me, To see
+                Contributors List
             </div><br>
-            <a href="https://www.instagram.com/im_kvv" style="text-decoration: none;">
-                <div id="btn" class="kvv-button">
+
+            <a style="text-decoration: none;">
+                <div id="btn" class="kvv-button" onclick="wish()">
                     A Game by K Vishnu Vardhan
+                </div>
+            </a>
+            <br>
+            <a href="https://chat.marvelpics.org" target="_blank" style="text-decoration: none;">
+                <div id="btn" class="helpcolor">
+                    Try beta Version
                 </div>
             </a>
         </div>
@@ -313,13 +325,13 @@
         document.getElementById("canvas").style.display = "none";
         document.getElementById("p").style.display = "none";
         document.getElementById("player").style.display = "none";
-        setTimeout(function() {
+        /*setTimeout(function() {
             swal(
                 'War of Comets 🎮',
                 'In Playstore, Soon...',
                 'success'
             )
-        }, 1500);
+        }, 1500);*/
 
         function thankyou() {
             swal({
@@ -328,6 +340,19 @@
 
             });
         }
+
+        function feedback() {
+            swal("GMail", "Kindly Mail your Valuable Feedback to Us, Also get a chance to be in Contributors List.", "success");
+        }
+
+        function wish() {
+            swal({
+                title: "War of Comets Version 2.7",
+                html: '',
+
+            });
+        }
+
 
         function turnon() {
             play();
