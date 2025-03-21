@@ -367,16 +367,12 @@
             myMusic.pause();
         }
        
-      function play() {
-           myMusic.play().catch(error => {
-           console.error("Playback error:", error);
-      });
-       }
+         function play() {
+           myMusic.play()
+      }
 
-        document.addEventListener("click", play);
-
-        window.onclick = play;
-        function help() {
+         window.onclick = play;
+         function help() {
             swal("War of Comets\n\n\nTap fastly, Don't Slide\nChoose your game level, From Easy, Normal or Hard🌟\n\n WAR OF COMETS Version 2.7 Stay Tuned🤍🖤");
         };
 
