@@ -1,92 +1,88 @@
-<!-- 
-
-   Vishnu 
-    
--->
+<<!-- Vishnu -->
 
 
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html>
 
-<head>
-    <title>Can you protect us from evil Comets?</title>
-    <meta charset="utf-8" />
-    <title>Can you protect us from evil Comets?</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://vishnu000000.github.io/kvv2134/img/vv.png" type="image/x-icon">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://vishnu000000.github.io/kvv2134/" />
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Can you protect us from evil Comets?">
-    <meta property="og:description" content="Can you protect us from evil Comets?">
-    <meta property="og:url" content="https://vishnu000000.github.io/kvv2134/img/vv.png" />
-    <meta name="twitter:image" content="https://vishnu000000.github.io/kvv2134/img/vv.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <head>
+        <title>Can you protect us from evil Comets?</title>
+        <meta charset="utf-8" />
+        <title>Can you protect us from evil Comets?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://vishnu000000.github.io/kvv2134/img/vv.png" type="image/x-icon">
+        <meta name="robots" content="index,follow">
+        <link rel="canonical" href="https://vishnu000000.github.io/kvv2134/" />
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Can you protect us from evil Comets?">
+        <meta property="og:description" content="Can you protect us from evil Comets?">
+        <meta property="og:url" content="https://vishnu000000.github.io/kvv2134/img/vv.png" />
+        <meta name="twitter:image" content="https://vishnu000000.github.io/kvv2134/img/vv.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
-    <style>
-        body {
-            background-color: RGB(247, 202, 201);
-            margin: 0;
-            padding: 0;
-        }
-        
-        canvas {
-            background-color: white;
-            position: fixed;
-        }
-        
-        p {
-            position: fixed;
-            color: #fff;
-            top: 0;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        #player {
-            height: 30px;
-            width: 30px;
-            border-radius: 100%;
-            background-color: skyblue;
-            position: fixed;
-            bottom: 50px;
-            left: 50px;
-        }
-        
-        #card {
-            display: none;
-        }
-        
-        #card {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .card {
-            padding-bottom: 15px;
-            padding-left: 5px;
-            padding-right: 5px;
-            width: 300px;
-            background-image: linear-gradient(75deg, #eecda3, #ef629f);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            border-radius: 20px;
-        }
-        
-        .card p {
-            color: #fff;
-            position: relative;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        /*#btn {
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+        <style>
+            body {
+                background-color: RGB(247, 202, 201);
+                margin: 0;
+                padding: 0;
+            }
+            
+            canvas {
+                background-color: white;
+                position: fixed;
+            }
+            
+            p {
+                position: fixed;
+                color: #fff;
+                top: 0;
+                left: 0;
+                font-weight: bold;
+            }
+            
+            #player {
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+                background-color: skyblue;
+                position: fixed;
+                bottom: 50px;
+                left: 50px;
+            }
+            
+            #card {
+                display: none;
+            }
+            
+            #card {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .card {
+                padding-bottom: 15px;
+                padding-left: 5px;
+                padding-right: 5px;
+                width: 300px;
+                background-image: linear-gradient(75deg, #eecda3, #ef629f);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 20px;
+            }
+            
+            .card p {
+                color: #fff;
+                position: relative;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            /*#btn {
             font-size: 20px;
             display: flex;
             align-items: center;
@@ -99,453 +95,438 @@
             border-radius: 8px;
             padding: 5px;
         }*/
-        
-        #sco {
-            display: none;
-        }
-        
-        .kvv-button {
-            align-items: center;
-            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-            border: 0;
-            border-radius: 8px;
-            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-            box-sizing: border-box;
-            color: #FFFFFF;
-            display: flex;
-            font-family: Phantomsans, sans-serif;
-            font-size: 20px;
-            justify-content: center;
-            line-height: 1em;
-            max-width: 100%;
-            min-width: 140px;
-            padding: 8px;
-            font-family: 'Times New Roman', serif;
-            text-decoration: none;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            white-space: nowrap;
-            cursor: pointer;
-        }
-        
-        .kvv-button:active,
-        .button-64:hover {
-            outline: 0;
-        }
-        
-        .kvv-button span {
-            padding: 16px 24px;
-            border-radius: 6px;
-            width: 100%;
-            height: 100%;
-            transition: 300ms;
-        }
-        
-        .kvv-button:hover span {
-            background: none;
-        }
-        
-        .helpcolor {
-            align-items: center;
-            background-image: linear-gradient(144deg, #4568dc, #e06ab3);
-            border: 0;
-            border-radius: 8px;
-            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-            box-sizing: border-box;
-            color: #FFFFFF;
-            display: flex;
-            font-family: Phantomsans, sans-serif;
-            font-size: 20px;
-            justify-content: center;
-            line-height: 1em;
-            max-width: 100%;
-            min-width: 140px;
-            padding: 8px;
-            font-family: 'Times New Roman', serif;
-            text-decoration: none;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            white-space: nowrap;
-            cursor: pointer;
-        }
-        
-        .helpcolor:active,
-        .button-64:hover {
-            outline: 0;
-        }
-        
-        .helpcolor span {
-            padding: 16px 24px;
-            border-radius: 6px;
-            width: 100%;
-            height: 100%;
-            transition: 300ms;
-        }
-        
-        .helpcolor:hover span {
-            background: none;
-        }
-        
-        @media (min-width: 768px) {
+            
+            #sco {
+                display: none;
+            }
+            
             .kvv-button {
-                font-size: 24px;
-                /*min-width: 196px;*/
+                align-items: center;
+                background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+                border: 0;
+                border-radius: 8px;
+                box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+                box-sizing: border-box;
+                color: #FFFFFF;
+                display: flex;
+                font-family: Phantomsans, sans-serif;
+                font-size: 20px;
+                justify-content: center;
+                line-height: 1em;
+                max-width: 100%;
+                min-width: 140px;
+                padding: 8px;
+                font-family: 'Times New Roman', serif;
+                text-decoration: none;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: nowrap;
+                cursor: pointer;
             }
+            
+            .kvv-button:active,
+            .button-64:hover {
+                outline: 0;
+            }
+            
+            .kvv-button span {
+                padding: 16px 24px;
+                border-radius: 6px;
+                width: 100%;
+                height: 100%;
+                transition: 300ms;
+            }
+            
+            .kvv-button:hover span {
+                background: none;
+            }
+            
             .helpcolor {
-                font-size: 24px;
-                /*min-width: 196px;*/
+                align-items: center;
+                background-image: linear-gradient(144deg, #4568dc, #e06ab3);
+                border: 0;
+                border-radius: 8px;
+                box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+                box-sizing: border-box;
+                color: #FFFFFF;
+                display: flex;
+                font-family: Phantomsans, sans-serif;
+                font-size: 20px;
+                justify-content: center;
+                line-height: 1em;
+                max-width: 100%;
+                min-width: 140px;
+                padding: 8px;
+                font-family: 'Times New Roman', serif;
+                text-decoration: none;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: nowrap;
+                cursor: pointer;
             }
-        }
-        
-        ul {
-            align-items: center;
-        }
-        
-        ul .imgg::before {
-            content: "";
-            background-image: url("https://vishnu000000.github.io/kvv2134/img/gaming.png");
-            background-size: contain;
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            position: relative;
-            top: 0.1rem;
-            margin-right: 0.2rem;
-        }
-        
-        ul.list-style {
-            list-style-image: url("https://vishnu000000.github.io/kvv2134/img/gaming.png");
-        }
-        
-        li {
-            font-size: 1em;
-        }
-    </style>
-</head>
+            
+            .helpcolor:active,
+            .button-64:hover {
+                outline: 0;
+            }
+            
+            .helpcolor span {
+                padding: 16px 24px;
+                border-radius: 6px;
+                width: 100%;
+                height: 100%;
+                transition: 300ms;
+            }
+            
+            .helpcolor:hover span {
+                background: none;
+            }
+            
+            @media (min-width: 768px) {
+                .kvv-button {
+                    font-size: 24px;
+                    /*min-width: 196px;*/
+                }
+                .helpcolor {
+                    font-size: 24px;
+                    /*min-width: 196px;*/
+                }
+            }
+            
+            ul {
+                align-items: center;
+            }
+            
+            ul .imgg::before {
+                content: "";
+                background-image: url("https://vishnu000000.github.io/kvv2134/img/gaming.png");
+                background-size: contain;
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                position: relative;
+                top: 0.1rem;
+                margin-right: 0.2rem;
+            }
+            
+            ul.list-style {
+                list-style-image: url("https://vishnu000000.github.io/kvv2134/img/gaming.png");
+            }
+            
+            li {
+                font-size: 1em;
+            }
+        </style>
+    </head>
 
-<body id="b">
-    <div style=" margin-left: 20%;" id="frontpage">
+    <body id="b">
+        <div style=" margin-left: 20%;" id="frontpage">
 
-        <ul style="list-style-type: none;">
+            <ul style="list-style-type: none;">
 
-            <li>
-                <h2><span style="color:#FFFFF0;
+                <li>
+                    <h2><span style="color:#FFFFF0;
                 font-family: Phantomsans, sans-serif;">War of Comets 🌠</span></h2>
 
-            </li><br><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('300');play();"><li class="imgg">
+                </li><br><br><br>
+                <button class="kvv-button" role="button" onclick="kvv('300');play();"><li class="imgg">
             <span class="text">Easy</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('220');play();"><li class="imgg">
+                <button class="kvv-button" role="button" onclick="kvv('220');play();"><li class="imgg">
             <span class="text">Normal</span></li>
           </button><br><br>
-            <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
+                <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
             <span class="text">Hard</span></li>
           </button><br><br>
-            <!--
+                <!--
             <button class="kvv-button" role="button" onclick="kvv('150');play();"><li class="imgg">
             <span class="text"></span></li>
           </button><br><br>
             <button class="kvv-button" role="button" onclick="kvv('100');play();"><li class="imgg">
             <span class="text">Insane</span></li>
           </button><br><br>-->
-            <button class="helpcolor" role="button" onclick="help();play();" onclick="play()"><li class="imgg">
+                <button class="helpcolor" role="button" onclick="help();play();" onclick="play()"><li class="imgg">
             <span class="text">Help</span></li>
           </button><br><br>
-            <li>
-<<<<<<< HEAD
-                <h3><span style="color: #f07884;
+                <li>
+                    <h3><span style="color: #f07884;
             font-family: Phantomsans, sans-serif;">Try Tapping Quicker for phone, Desktop(Cursor Movement)<br><br>Adjust Your Volume for Better Experience...</span></h3>
-=======
-                <h3><span style="color: #5cff49;
-            font-family: Phantomsans, sans-serif;">Try Tapping Quicker.<br><br>Adjust Your Volume for Better Experience...</span></h3>
->>>>>>> 778ecb099cafcf305168254681ad176b204c797a
-            </li>
-        </ul>
-    </div>
-    <canvas id="canvas"></canvas>
-    <p id="p"></p>
-    <div id="player"></div>
-    <div id="card">
-        <div class="card">
-            <h1 style="text-align: center;color:#bcfd49;">Game Over</h1>
-            <p id="sco" style="text-align: center;color:#bcfd49;">Score :</p>
-            <div id="btn" class="kvv-button">
-                Play Again
-            </div><br>
-            <!--<a href="https://chat.marvelpics.org" style="text-decoration: none;">
+                </li>
+            </ul>
+        </div>
+        <canvas id="canvas"></canvas>
+        <p id="p"></p>
+        <div id="player"></div>
+        <div id="card">
+            <div class="card">
+                <h1 style="text-align: center;color:#bcfd49;">Game Over</h1>
+                <p id="sco" style="text-align: center;color:#bcfd49;">Score :</p>
+                <div id="btn" class="kvv-button">
+                    Play Again
+                </div><br>
+                <!--<a href="https://chat.marvelpics.org" style="text-decoration: none;">
                 <div id="btn" class="kvv-button">
                     Adjust Level
                 </div>
             </a><br>-->
-            <div id="btn" class="kvv-button" onclick="turnon()">
-                Music on
-            </div><br>
-            <div id="btn" class="kvv-button" onclick="turnoff()">
-                Music off
-            </div><br>
-            <!--<a href="https://www.instagram.com/vishnu.kilaparthi" style="text-decoration: none;">
+                <div id="btn" class="kvv-button" onclick="turnon()">
+                    Music on
+                </div><br>
+                <div id="btn" class="kvv-button" onclick="turnoff()">
+                    Music off
+                </div><br>
+                <!--<a href="https://www.instagram.com/vishnu.kilaparthi" style="text-decoration: none;">
                 <div id="btn" class="kvv-button">
                     Contact Us
                 </div>
             </a><br>-->
-            <a href="mailto:vishnuvardhan44886@gmail.com?subject=Feedback&body=Hi%20there%20My%20Suggestion%20is..." style="text-decoration: none;">
-                <div id="btn" class="kvv-button" onclick="feedback()">
-                    Contact Us
-                </div>
-            </a><br>
-            <div id="btn" class="kvv-button" onclick="thankyou()">
-                Contributors List
-            </div><br>
-            <a href="https://vishnu000000.github.io/kvv2134/" target="_blank" style="text-decoration: none;">
-                <div id="btn" class="helpcolor">
-                    Try beta Version
-                </div>
-            </a><br>
-            <a style="text-decoration: none;">
-                <div id="btn" class="kvv-button" onclick="wish()">
-                    A Game by K Vishnu Vardhan
-                </div>
-            </a>
+                <a href="mailto:vishnuvardhan44886@gmail.com?subject=Feedback&body=Hi%20there%20My%20Suggestion%20is..." style="text-decoration: none;">
+                    <div id="btn" class="kvv-button" onclick="feedback()">
+                        Contact Us
+                    </div>
+                </a><br>
+                <div id="btn" class="kvv-button" onclick="thankyou()">
+                    Contributors List
+                </div><br>
+                <a href="https://vishnu000000.github.io/kvv2134/" target="_blank" style="text-decoration: none;">
+                    <div id="btn" class="helpcolor">
+                        Try beta Version
+                    </div>
+                </a><br>
+                <a style="text-decoration: none;">
+                    <div id="btn" class="kvv-button" onclick="wish()">
+                        A Game by K Vishnu Vardhan
+                    </div>
+                </a>
 
+            </div>
         </div>
-    </div>
 
-<<<<<<< HEAD
-    <audio id="music" loop autoplay hidden>
+        <audio id="music" loop autoplay hidden>
     <source src="https://www.dropbox.com/scl/fi/23i0path5rdr6drwvy7u8/trailer_shot.mp3?rlkey=3z928163qf2k7mr94evezaxnw&st=dgrlxluw&dl=1" type="audio/mpeg">
-=======
-<audio id="music" loop autoplay hidden>
-    <source src="https://www.dropbox.com/scl/fi/23i0path5rdr6drwvy7u8/trailer_shot.mp3?rlkey=3z928163qf2k7mr94evezaxnw&st=uumizcfv&dl=1" type="audio/mpeg">
->>>>>>> 778ecb099cafcf305168254681ad176b204c797a
     Your browser does not support the audio element.
 </audio>
-    <script>
-        // Vishnu
-
-        var dur;
-        document.getElementById("card").style.display = "none";g
-        document.getElementById("canvas").style.display = "none";
-        document.getElementById("p").style.display = "none";
-        document.getElementById("player").style.display = "none";
-        /*setTimeout(function() {
-            swal(
-                'War of Comets 🎮',
-                'In Playstore, Soon...',
-                'success'
-            )
-        }, 1500);*/
-
-        function thankyou() {
-            swal({
-                title: "To The Contributors.",
-                html: 'Shalini, Caleb Guarro, Lohit, Swati, Dhanush, Fatima<br>-- Code Reviewed<br><br> Dhanush, Rajesh, Saranya, Tejesh, Akshay, Roshini<br>-- Feedback<br><br>Naveen, Lokesh, Kavya sri, Siva, Charan teja, Amit Shaw, Pavan, Raj Kumar, Shailendra, Surya vamsi<br>-- Making Popular.',
-
-            });
-        }
-
-        function feedback() {
-            swal("GMail", "Kindly Mail your Valuable Feedback to Us, Also get a chance to be in Contributors List.", "success");
-        }
-
-        function wish() {
-            swal({
-                title: "War of Comets Version 2.7",
-                html: '',
-
-            });
-        }
+        <script>
+            // Vishnu
 
 
-        function turnon() {
-            play();
-            swal("War of Comets", "Game Audio Effects Turned on.", "success");
-        }
+            var dur;
+            document.getElementById("card").style.display = "none";
+            document.getElementById("canvas").style.display = "none";
+            document.getElementById("p").style.display = "none";
+            document.getElementById("player").style.display = "none";
+            /*setTimeout(function() {
+                swal(
+                    'War of Comets 🎮',
+                    'In Playstore, Soon...',
+                    'success'
+                )
+            }, 1500);*/
 
-        function turnoff() {
-            pause();
-            swal("War of Comets", "Game BG Music has Turned off.", "success");
-        }
-        var myMusic = document.getElementById("music");
+            function thankyou() {
+                swal({
+                    title: "To The Contributors.",
+                    html: 'Shalini, Caleb Guarro, Lohit, Swati, Dhanush, Fatima<br>-- Code Reviewed<br><br> Dhanush, Rajesh, Saranya, Tejesh, Akshay, Roshini<br>-- Feedback<br><br>Naveen, Lokesh, Kavya sri, Siva, Charan teja, Amit Shaw, Pavan, Raj Kumar, Shailendra, Surya vamsi<br>-- Making Popular.',
 
-<<<<<<< HEAD
-        function play() {
-            myMusic.play().catch(function(error) {
-                // Autoplay might be blocked; handle the error if needed.
-                console.log("Playback error:", error);
-            });
-        }
-
-=======
->>>>>>> 778ecb099cafcf305168254681ad176b204c797a
-
-
-        function pause() {
-            myMusic.pause();
-        }
-       
-         function play() {
-           myMusic.play()
-      }
-
-         window.onclick = play;
-         function help() {
-            swal("War of Comets\n\n\nTap fastly, Don't Slide\nChoose your game level, From Easy, Normal or Hard🌟\n\n WAR OF COMETS Version 2.7 Stay Tuned🤍🖤");
-        };
-
-        function kvv(dur) {
-            document.getElementById("frontpage").style.display = "none";
-            document.getElementById("card").style.display = "initial";
-            document.getElementById("canvas").style.display = "initial";
-            document.getElementById("p").style.display = "initial";
-            document.getElementById("player").style.display = "initial";
-            const cnv = document.getElementById("canvas");
-            const ctx = cnv.getContext("2d");
-            cnv.height = window.innerHeight;
-            cnv.width = window.innerWidth;
-            let enemies = [];
-            var posX = 50;
-            var posY = cnv.height - 50;
-            let alive = true;
-            let score = 0;
-            document.getElementById("player").style.bottom = posY;
-            document.getElementById("player").style.left = posX;
-            let b = document.getElementById("b");
-            document.getElementById("btn").addEventListener("click", restart)
-
-            function restart() {
-                cnv.style.display = "block";
-                document.getElementById("card").style.display = "none";
-                document.getElementById("player").style.display = "block";
-                document.getElementById("p").style.display = "block";
-                score = 0;
-                enemies = [];
-                alive = true;
-                requestAnimationFrame(animate)
+                });
             }
-            var {
-                random,
-                round,
-                floor,
-                PI
-            } = Math;
 
-            function enemy(x, y, color, radius) {
-                this.x = x;
-                this.y = y;
-                this.color = color;
-                this.radius = radius;
-                this.m = 0;
-                this.createEnemy = () => {
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.fillStyle = this.color;
-                    ctx.arc(this.x, this.y, this.radius, 0, 2 * PI);
-                    ctx.fill();
-                    ctx.restore();
+            function feedback() {
+                swal("GMail", "Kindly Mail your Valuable Feedback to Us, Also get a chance to be in Contributors List.", "success");
+            }
+
+            function wish() {
+                swal({
+                    title: "War of Comets Version 2.7",
+                    html: '',
+
+                });
+            }
+
+
+            function turnon() {
+                play();
+                swal("War of Comets", "Game Audio Effects Turned on.", "success");
+            }
+
+            function turnoff() {
+                pause();
+                swal("War of Comets", "Game BG Music has Turned off.", "success");
+            }
+            var myMusic = document.getElementById("music");
+
+            function play() {
+                myMusic.play().catch(function(error) {
+                    // Autoplay might be blocked; handle the error if needed.
+                    console.log("Playback error:", error);
+                });
+            }
+
+
+
+            function pause() {
+                myMusic.pause();
+            }
+
+            window.onclick = play;
+
+            function help() {
+                swal("War of Comets\n\n\nTap fastly, Don't Slide\nChoose your game level, From Easy, Normal or Hard🌟\n\n WAR OF COMETS Version 2.7 Stay Tuned🤍🖤");
+            };
+
+            function kvv(dur) {
+                document.getElementById("frontpage").style.display = "none";
+                document.getElementById("card").style.display = "initial";
+                document.getElementById("canvas").style.display = "initial";
+                document.getElementById("p").style.display = "initial";
+                document.getElementById("player").style.display = "initial";
+                const cnv = document.getElementById("canvas");
+                const ctx = cnv.getContext("2d");
+                cnv.height = window.innerHeight;
+                cnv.width = window.innerWidth;
+                let enemies = [];
+                var posX = 50;
+                var posY = cnv.height - 50;
+                let alive = true;
+                let score = 0;
+                document.getElementById("player").style.bottom = posY;
+                document.getElementById("player").style.left = posX;
+                let b = document.getElementById("b");
+                document.getElementById("btn").addEventListener("click", restart)
+
+                function restart() {
+                    cnv.style.display = "block";
+                    document.getElementById("card").style.display = "none";
+                    document.getElementById("player").style.display = "block";
+                    document.getElementById("p").style.display = "block";
+                    score = 0;
+                    enemies = [];
+                    alive = true;
+                    requestAnimationFrame(animate)
                 }
-                this.update = () => {
-                    this.y += 3;
-                    this.m += random() * 1 - 0.5;
-                    this.x += this.m;
-                }
-            }
-            // End game 
-            function gameEnd() {
-                cnv.style.display = "none";
-                document.getElementById("card").style.display = "flex";
-                document.getElementById("sco").innerHTML = "Score : " + score;
-                document.getElementById("player").style.display = "none";
-                ctx.clearRect(0, 0, cnv.height, cnv.width);
-                document.getElementById("p").style.display = "none";
-                document.getElementById("sco").style.display = "block";
-            }
-            /***********             *********/
+                var {
+                    random,
+                    round,
+                    floor,
+                    PI
+                } = Math;
 
-            /*Score*/
-            function scores() {
-                if (alive == true) {
-                    score += 1;
-                } else {
-                    score += 0;
-                }
-                document.getElementById("p").innerHTML = "Score : " + score;
-            }
-            setInterval(scores, 100)
-
-            /******       *******/
-            b.addEventListener("touchmove", getcord)
-            b.addEventListener("touchstart", getcord)
-            b.addEventListener("touchcancel", getcord)
-            b.addEventListener("mousemove", getcord)
-            b.addEventListener("mousedown", getcord)
-            b.addEventListener("mouseup", getcord)
-
-            function getcord(e) {
-                if (e.type == "touchstart" || e.type == "touchmove" || e.type == "touchcancel") {
-                    posX = e.touches[0].clientX;
-                    posY = e.touches[0].clientY;
-                    /*prevent from going player out*/
-                    if (posY < 0) {
-                        posY = 0;
+                function enemy(x, y, color, radius) {
+                    this.x = x;
+                    this.y = y;
+                    this.color = color;
+                    this.radius = radius;
+                    this.m = 0;
+                    this.createEnemy = () => {
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.fillStyle = this.color;
+                        ctx.arc(this.x, this.y, this.radius, 0, 2 * PI);
+                        ctx.fill();
+                        ctx.restore();
                     }
-                    if (posY >= cnv.height) {
-                        posY = cnv.height;
-                    }
-                } else {
-                    posX = e.clientX;
-                    posY = e.clientY;
-                }
-                document.getElementById("player").style.top = (posY - 15) + "px";
-                document.getElementById("player").style.left = (posX - 15) + "px";
-            }
-            var colofcom;
-            var kvv = ['#00FF00', '#FF00FF', '#FFFF00', '#FF7F00', 'red'];
-            /*kvv[Math.floor(Math.random() * kvv.length)];
-            , '#FFD700', '#bcfd49' green magenta yellow orange*/
-            function atk() {
-                for (i = 0; i < 1; i++) {
-                    enemies.push(new enemy(random() * cnv.width, 0, kvv[(Math.floor(Math.random() * score / 40)) % 5], 3))
-                }
-            }
-
-
-            function check() {
-                for (let i = 0; i < enemies.length; i++) {
-                    if (enemies[i].x > posX - 15 && enemies[i].x < posX + 15 && enemies[i].y > posY - 15 && enemies[i].y < posY + 15) {
-                        enemies = [];
-                        alive = false;
-                        gameEnd();
+                    this.update = () => {
+                        this.y += 3;
+                        this.m += random() * 1 - 0.5;
+                        this.x += this.m;
                     }
                 }
-            }
-            setInterval(atk, dur)
+                // End game 
+                function gameEnd() {
+                    cnv.style.display = "none";
+                    document.getElementById("card").style.display = "flex";
+                    document.getElementById("sco").innerHTML = "Score : " + score;
+                    document.getElementById("player").style.display = "none";
+                    ctx.clearRect(0, 0, cnv.height, cnv.width);
+                    document.getElementById("p").style.display = "none";
+                    document.getElementById("sco").style.display = "block";
+                }
+                /***********             *********/
 
-            function animate() {
-                ctx.fillStyle = "rgb(0,0,0,0.1)";
-                ctx.fillRect(0, 0, cnv.width, cnv.height);
-                for (let i = 0; i < enemies.length; i++) {
-                    enemies[i].createEnemy();
-                    enemies[i].update();
-                    if (enemies[i].y >= cnv.height) {
-                        enemies.splice(1, i)
+                /*Score*/
+                function scores() {
+                    if (alive == true) {
+                        score += 1;
+                    } else {
+                        score += 0;
                     }
-                    check();
+                    document.getElementById("p").innerHTML = "Score : " + score;
                 }
-                if (alive == true) {
-                    requestAnimationFrame(animate);
+                setInterval(scores, 100)
+
+                /******       *******/
+                b.addEventListener("touchmove", getcord)
+                b.addEventListener("touchstart", getcord)
+                b.addEventListener("touchcancel", getcord)
+                b.addEventListener("mousemove", getcord)
+                b.addEventListener("mousedown", getcord)
+                b.addEventListener("mouseup", getcord)
+
+                function getcord(e) {
+                    if (e.type == "touchstart" || e.type == "touchmove" || e.type == "touchcancel") {
+                        posX = e.touches[0].clientX;
+                        posY = e.touches[0].clientY;
+                        /*prevent from going player out*/
+                        if (posY < 0) {
+                            posY = 0;
+                        }
+                        if (posY >= cnv.height) {
+                            posY = cnv.height;
+                        }
+                    } else {
+                        posX = e.clientX;
+                        posY = e.clientY;
+                    }
+                    document.getElementById("player").style.top = (posY - 15) + "px";
+                    document.getElementById("player").style.left = (posX - 15) + "px";
+                }
+                var colofcom;
+                var kvv = ['#00FF00', '#FF00FF', '#FFFF00', '#FF7F00', 'red'];
+                /*kvv[Math.floor(Math.random() * kvv.length)];
+                , '#FFD700', '#bcfd49' green magenta yellow orange*/
+                function atk() {
+                    for (i = 0; i < 1; i++) {
+                        enemies.push(new enemy(random() * cnv.width, 0, kvv[(Math.floor(Math.random() * score / 40)) % 5], 3))
+                    }
                 }
 
+
+                function check() {
+                    for (let i = 0; i < enemies.length; i++) {
+                        if (enemies[i].x > posX - 15 && enemies[i].x < posX + 15 && enemies[i].y > posY - 15 && enemies[i].y < posY + 15) {
+                            enemies = [];
+                            alive = false;
+                            gameEnd();
+                        }
+                    }
+                }
+                setInterval(atk, dur)
+
+                function animate() {
+                    ctx.fillStyle = "rgb(0,0,0,0.1)";
+                    ctx.fillRect(0, 0, cnv.width, cnv.height);
+                    for (let i = 0; i < enemies.length; i++) {
+                        enemies[i].createEnemy();
+                        enemies[i].update();
+                        if (enemies[i].y >= cnv.height) {
+                            enemies.splice(1, i)
+                        }
+                        check();
+                    }
+                    if (alive == true) {
+                        requestAnimationFrame(animate);
+                    }
+
+                }
+                animate();
+                window.addEventListener("resize", () => {
+                    cnv.width = innerWidth;
+                    cnv.height = innerHeight;
+                });
             }
-            animate();
-            window.addEventListener("resize", () => {
-                cnv.width = innerWidth;
-                cnv.height = innerHeight;
-            });
-        }
-    </script>
-</body>
+        </script>
+    </body>
 
-</html>
+    </html>
