@@ -308,12 +308,10 @@
         </div>
     </div>
 
-    <audio controls id="music" loop autoplay hidden>
-
-        <source src="https://drive.google.com/uc?export=download&id=1uCkY5qNE6NswnecYr5kA4dDUw-ROVQa6" type="audio/mpeg">
-        Your browser does not support the audio element.
-        
-        </audio>
+<audio id="music" loop autoplay hidden>
+    <source src="https://drive.google.com/uc?export=download&id=1uCkY5qNE6NswnecYr5kA4dDUw-ROVQa6" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
     <script>
         // Vishnu
 
@@ -363,21 +361,20 @@
         }
         var myMusic = document.getElementById("music");
 
-        function play() {
-
-            myMusic.play();
-
-        }
+       function play() {
+           myMusic.play().catch(function(error) {
+               // Autoplay might be blocked; handle the error if needed.
+               console.log("Playback error:", error);
+           });
+       }
 
 
 
         function pause() {
-
             myMusic.pause();
-
         }
 
-        window.onclick = play();
+        window.onclick = play;
 
         function help() {
             swal("War of Comets\n\n\nTap fastly, Don't Slide\nChoose your game level, From Easy, Normal or Hard🌟\n\n WAR OF COMETS Version 2.7 Stay Tuned🤍🖤");
